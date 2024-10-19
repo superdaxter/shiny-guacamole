@@ -1,14 +1,33 @@
-import './assets/scss/main.scss'
+/* Imports
+================================================================================ */
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from "vue";
+import { createPinia } from "pinia";
 
-import App from './App.vue'
-import router from './router'
+import App from "./App.vue";
+import router from "./router";
 
-const app = createApp(App)
+/* ==== CSS ==== */
+// owner
+import "./assets/scss/main.scss";
 
-app.use(createPinia())
-app.use(router)
+// Bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
 
-app.mount('#app')
+// fonts
+import "@fontsource/ubuntu/400.css";
+import "@fontsource/ubuntu/500.css";
+import "@fontsource/ubuntu/700.css";
+
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+
+/* Init Vue
+================================================================================ */
+const app = createApp(App);
+
+app.use(createPinia()).use(router);
+
+app.mount("#app");
